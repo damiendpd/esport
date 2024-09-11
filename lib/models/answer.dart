@@ -1,27 +1,27 @@
-class Question {
-  final int idEvent;
+class Answer {
+  final int idReponse;
   final int idQuestion;
-  final String libelleQuestion;
+  final String descriptionReponse;
 
-  Question({
-    required this.idEvent,
+  Answer({
+    required this.idReponse,
     required this.idQuestion,
-    required this.libelleQuestion,
+    required this.descriptionReponse,
   });
 
   Map<String, dynamic> toMap() {
     return {
-      'idEvent': idEvent,
+      'idReponse': idReponse,
       'idQuestion': idQuestion,
-      'libelleQuestion': libelleQuestion,
+      'descriptionReponse': descriptionReponse,
     };
   }
 
-  factory Question.fromMap(Map<String, dynamic> map) {
-    return Question(
-      idEvent: map['idEvent'],
+  factory Answer.fromMap(Map<String, dynamic> map) {
+    return Answer(
+      idReponse: map['idReponse'],
       idQuestion: map['idQuestion'],
-      libelleQuestion: map['libelleQuestion'],
+      descriptionReponse: map['descriptionReponse'],
     );
   }
 }
